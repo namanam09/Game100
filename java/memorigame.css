@@ -1,0 +1,96 @@
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration:  none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family:  "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    background-color: #6589f9;
+}
+
+.grid {
+    max-width: 660px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 5px;
+    background-color: #6589f9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    transition:  all 0.4s linear;
+    transform-style: preserve-3d;
+    background: transparent !important;
+}
+
+.card, .back, .front {
+    height: 150px;
+    width: 150px;
+}
+
+.card.selected {
+    border:  4px solid white;
+}
+
+.matched {
+    border: 0;
+    background-image: none !important;
+    pointer-events: none;
+}
+
+.front{
+    background: #6589f9 url("./image/question.gif") no-repeat center
+    center / contain;
+}
+
+
+
+.back, .front {
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+
+.back {
+    transform: rotateY(180deg);
+    /* background-color: white; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.matched .front {
+    background: #6589f9 !important;
+}
+
+.header-title {
+    justify-content: center;
+    align-items: center;
+}
